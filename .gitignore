@@ -1,0 +1,15 @@
+*.chi
+*.chs.h
+*.hi
+*.o
+*~
+.#*
+.DS_Store
+.cabal-sandbox/
+.hsenv
+.virthualenv
+\#*
+cabal-dev
+cabal.config
+cabal.sandbox.config
+dist
