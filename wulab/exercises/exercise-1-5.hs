@@ -5,6 +5,7 @@ Sum is defined as follows:
 
   sum []       = 0
   sum (x : xs) = x + sum xs
+
 -}
 
 {-
