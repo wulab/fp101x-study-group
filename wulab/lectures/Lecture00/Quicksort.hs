@@ -1,4 +1,3 @@
--- Quicksort
 f []     = []
 f (x:xs) = f ys ++ [x] ++ f zs
            where
