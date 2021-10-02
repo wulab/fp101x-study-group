@@ -9,7 +9,7 @@
 ## Lectures
 
  - [x]  0. Introduction
- - [ ]  1. First Steps
+ - [x]  1. First Steps
  - [ ]  2. Types and Classes
  - [ ]  3. Defining Functions
  - [ ]  4. List Comprehensions
