@@ -10,7 +10,7 @@
 
  - [x]  0. Introduction
  - [x]  1. First Steps
- - [ ]  2. Types and Classes
+ - [x]  2. Types and Classes
  - [ ]  3. Defining Functions
  - [ ]  4. List Comprehensions
  - [ ]  5. Recursive Functions
