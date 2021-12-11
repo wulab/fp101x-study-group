@@ -11,9 +11,9 @@
  - [x]  0. Introduction
  - [x]  1. First Steps
  - [x]  2. Types and Classes
- - [ ]  3. Defining Functions
- - [ ]  4. List Comprehensions
- - [ ]  5. Recursive Functions
+ - [x]  3. Defining Functions
+ - [x]  4. List Comprehensions
+ - [x]  5. Recursive Functions
  - [ ]  6. Higher-Order Functions
  - [ ]  7. Functional Parsers and Monads
  - [ ]  8. Interactive Programs
