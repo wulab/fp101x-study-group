@@ -14,9 +14,9 @@
  - [x]  3. Defining Functions
  - [x]  4. List Comprehensions
  - [x]  5. Recursive Functions
- - [ ]  6. Higher-Order Functions
+ - [x]  6. Higher-Order Functions
  - [ ]  7. Functional Parsers and Monads
- - [ ]  8. Interactive Programs
+ - [x]  8. Interactive Programs
  - [ ]  9. Declaring Types and Classes
  - [ ] 10. The Countdown Problem
  - [ ] 11. Lazy Evaluation
