@@ -1,5 +1,3 @@
-module Exercise5 where
-
 {- Exercise 5
 
 Euclid’s Algorithm returns the greatest common factor of two integers
@@ -14,6 +12,8 @@ Define a recursive function that implements euclid :: (Int, Int) -> Int
 
 What is the result of: euclid (13404, 8832)?
 -}
+
+module Exercise5 where
 
 euclid :: (Int, Int) -> Int
 euclid (x, y) | x < y = euclid (x, y-x)

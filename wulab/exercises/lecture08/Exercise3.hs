@@ -9,10 +9,11 @@ from the standard input.
 -}
 
 module Exercise3 where
-  getLine' = get []
 
-  get :: String -> IO String
-  get xs = do x <- getChar
-              case x of
-                '\n' -> return xs
-                _    -> get (xs ++ [x])
+getLine' = get []
+
+get :: String -> IO String
+get xs = do x <- getChar
+            case x of
+              '\n' -> return xs
+              _    -> get (xs ++ [x])

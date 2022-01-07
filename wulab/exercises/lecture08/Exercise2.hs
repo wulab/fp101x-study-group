@@ -11,7 +11,8 @@ and all functions are total, and all values are finite.
 -- ghci> :cd wulab/exercises/lecture08
 -- ghci> :load Exercise2.hs
 module Exercise2 where
-  import Exercise1
 
-  putStrLn' [] = putChar '\n'
-  putStrLn' xs = putStr' xs >> putChar '\n'
+import Exercise1
+
+putStrLn' [] = putChar '\n'
+putStrLn' xs = putStr' xs >> putChar '\n'

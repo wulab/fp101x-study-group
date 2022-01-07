@@ -10,8 +10,9 @@ as its parameter and writes it to the standard output.
 
 -- Module name is required to import Exercise1
 module Exercise1 where
-  putStr' [] = return ()
-  putStr' (x:xs) = putChar x >> putStr' xs
+
+putStr' [] = return ()
+putStr' (x:xs) = putChar x >> putStr' xs
 
 {- https://stackoverflow.com/a/2486591
 

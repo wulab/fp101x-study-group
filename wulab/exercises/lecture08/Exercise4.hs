@@ -10,8 +10,9 @@ followed by a newline on the standard output?
 -- ghci> :cd wulab/exercises/lecture08
 -- ghci> :load Exercise2.hs
 module Exercise4 where
-  import Exercise2
-  import Exercise3
 
-  interact' f = do input <- getLine'
-                   putStrLn' (f input)
+import Exercise2
+import Exercise3
+
+interact' f = do input <- getLine'
+                 putStrLn' (f input)

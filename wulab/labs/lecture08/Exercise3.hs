@@ -1,5 +1,3 @@
-module Exercise3 where
-
 {- Exercise 3
 
 Define a recursive function count :: Eq a => a -> [a] -> Integer that
@@ -17,6 +15,8 @@ Example: count 'e' "The quick brown fox jumped over the lazy dog." = 4
 Given the lists xs and ys that are defined in the template for this
 lab, what is the result of: count 722 ys?
 -}
+
+module Exercise3 where
 
 count :: Eq a => a -> [a] -> Integer
 count a [] = 0
