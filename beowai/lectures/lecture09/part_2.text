@@ -1,0 +1,55 @@
+Declaring Types and Classes - Part 2
+
+Recursive Types
+In Haskell, new type can be declared in terms of themselves.
+That is, types can be recursive
+
+data Nat = Zero | Succ Nat
+
+Nat is a new type, with constructors Zero :: Nat and Succ :: Nat -> Nat
+
+Note:
+- A value of type Nat is either Zero, or of the form Succ n where n :: Nat. 
+That is, Nat contains the following infinite sequence of values.
+
+Zero
+Succ Zero
+Succ Succ Zero
+
+- We can think of values of type Nat as natural numbers,
+where Zero represents 0, and Succ represents the successor function 1+.
+- For example, the value
+
+Succ (Succ (Succ Zero))
+
+represents the natural numbers
+1 + (1 + (1 + 0)) = 3
+
+Using recursion, it is easy to define functions that convert between values of type Nat and Int.
+
+nat2int :: Nat -> Int
+nat2int (Succ n) = 1 + nat2int n
+nat2int Zero = 0
+
+
+int2nat :: Int -> Nat
+int2nat 0 = Zero
+int2nat n = Succ (int2nat (n - 1))
+
+Two naturals can be added by converting them to integers, adding, 
+and then converting back:
+
+add :: Nat -> Nat -> Nat
+add m n = int2nat (nat2int m + nat2int m)
+
+However, using recursion the function add can be defined without the need for conversions:
+
+add Zero n = n
+add (Succ m) n = Succ (add m n)
+
+For example:
+
+add (Succ (Succ Zero)) (Succ Zero)
+Succ (add (Succ Zero) (Succ Zero))
+Succ (Succ (add Zero (Succ Zero))) ---> add Zero n = n, so add Zero (Succ Zero) = Succ Zero
+Succ (Succ (Succ Zero))
