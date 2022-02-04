@@ -1,9 +1,9 @@
 f []     = []
 f [x]    = [x]
 f (x:xs) = f ys ++ [x] ++ f zs
-           where
-             ys = [a | a <- xs, a <= x]
-             zs = [b | b <- xs, b >  x]
+  where
+    ys = [a | a <- xs, a <= x]
+    zs = [b | b <- xs, b >  x]
 
 {-
 f [3,2,1,4,5,6]
