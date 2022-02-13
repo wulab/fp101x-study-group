@@ -5,7 +5,13 @@ data Op = Add
         | Sub
         | Mul
         | Div
-        deriving Show
+
+instance Show Op
+  where
+    show Add = "+"
+    show Sub = "-"
+    show Mul = "×"
+    show Div = "÷"
 
 -- Apply an operator
 apply :: Op -> Int -> Int -> Int
@@ -24,7 +30,11 @@ valid Div x y = x `mod` y == 0
 
 data Expr = Val Int
           | App Op Expr Expr
-          deriving Show
+
+instance Show Expr
+  where
+    show (Val n)      = show n
+    show (App op x y) = "(" ++ show x ++ " " ++ show op ++ " " ++ show y ++ ")"
 
 -- Return the overall value of an expression.
 eval :: Expr -> [Int]
@@ -37,7 +47,7 @@ eval (App op x y) = [apply op x' y' | x' <- eval x
 -- Return a list of all the values in an expression.
 values :: Expr -> [Int]
 values (Val n)     = [n]
-values (App _ l r) = values l ++ values r
+values (App _ x y) = values x ++ values y
 
 -- Decide if an expression is a solution for a given list of
 -- source numbers and a target number.
@@ -50,10 +60,10 @@ solution e ns n = elem (values e) (choices ns)
 exprs :: [Int] -> [Expr]
 exprs []  = []
 exprs [n] = [Val n]
-exprs ns  = [e | (ls, rs) <- split ns
-               , l        <- exprs ls
-               , r        <- exprs rs
-               , e        <- combine l r
+exprs ns  = [e | (xs, ys) <- split ns
+               , x        <- exprs xs
+               , y        <- exprs ys
+               , e        <- combine x y
                ]
 
 -- Combine two expressions using each operator.
