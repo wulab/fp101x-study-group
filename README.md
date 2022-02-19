@@ -19,7 +19,7 @@
  - [x]  8. Interactive Programs
  - [x]  9. Declaring Types and Classes
  - [x] 10. The Countdown Problem
- - [ ] 11. Lazy Evaluation
+ - [x] 11. Lazy Evaluation
  - [ ] 12. Reasoning about Programs
  - [ ] 13. Jolly holiday presents from the FP101x staff
 
